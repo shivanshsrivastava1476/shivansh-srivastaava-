@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Board Papers: Class 10 and 12 previous year question papers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5FA; --ink:#12203F; --muted:#56638A; --card:#FFFFFF; --line:#D3DBEA;
+  --mark:#FFD23F; --mark-ink:#12203F; --done:#0F8A5F; --done-ink:#FFFFFF; --focus:#1D4ED8;
+  --display:'Bricolage Grotesque','Trebuchet MS',system-ui,sans-serif;
+  --body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E1424; --ink:#E8EDFA; --muted:#9AA6C7; --card:#161E33; --line:#2A3554; --focus:#7FA2FF; --done:#2FBF8A; --done-ink:#08130F;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E1424; --ink:#E8EDFA; --muted:#9AA6C7; --card:#161E33; --line:#2A3554; --focus:#7FA2FF; --done:#2FBF8A; --done-ink:#08130F;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* top bar */
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.brand{font-family:var(--display);font-weight:800;font-size:1.2rem;letter-spacing:-.01em}
+.brand span{background:var(--mark);color:var(--mark-ink);padding:0 .35em;border-radius:4px;margin-right:.25em}
+.theme{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 14px;cursor:pointer;font-size:.9rem}
+
+/* hero */
+.hero{padding:18px 0 8px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(1.5rem,3.6vw,2.1rem);line-height:1.15;margin:0 0 6px;letter-spacing:-.015em;max-width:22ch}
+.hero p{margin:0;color:var(--muted);max-width:52ch}
+.classpick{display:flex;gap:clamp(10px,3vw,28px);margin:22px 0 6px;align-items:flex-end;flex-wrap:nowrap}
+.classbtn{
+  border:0;background:transparent;cursor:pointer;padding:0 .12em;border-radius:14px;
+  font-family:var(--display);font-weight:800;line-height:.95;letter-spacing:-.04em;
+  font-size:clamp(5.5rem,24vw,12rem);
+  color:transparent;-webkit-text-stroke:3px var(--ink);
+  transition:background .2s,color .2s,transform .2s;
+}
+.classbtn small{display:block;font-family:var(--body);font-weight:600;font-size:.9rem;letter-spacing:0;-webkit-text-stroke:0;color:var(--muted);padding:0 0 10px .3rem;line-height:1}
+.classbtn[aria-pressed="true"]{background:var(--mark);color:var(--mark-ink);-webkit-text-stroke:0;transform:rotate(-1.5deg)}
+.classbtn[aria-pressed="true"] small{color:var(--mark-ink)}
+.classbtn:hover:not([aria-pressed="true"]){background:color-mix(in srgb,var(--mark) 25%,transparent)}
+
+/* controls */
+.controls{display:grid;gap:14px;margin:18px 0 10px;padding:16px;background:var(--card);border:1.5px solid var(--line);border-radius:14px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.row>.lbl{font-weight:600;font-size:.9rem;color:var(--muted);min-width:64px}
+.pill{border:1.5px solid var(--line);background:transparent;border-radius:999px;padding:6px 14px;cursor:pointer;font-weight:500;font-size:.95rem}
+.pill:hover{border-color:var(--ink)}
+.pill[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.search{flex:1;min-width:200px;border:1.5px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 12px}
+.search::placeholder{color:var(--muted)}
+
+.status{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:18px 0 10px;font-size:.95rem;color:var(--muted)}
+.status strong{color:var(--ink)}
+.reset{border:0;background:none;color:var(--focus);cursor:pointer;text-decoration:underline;padding:0}
+
+/* results */
+.stream{font-family:var(--display);font-weight:700;font-size:1.15rem;margin:26px 0 10px;letter-spacing:-.01em}
+.list{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(min(100%,470px),1fr))}
+.subj{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px}
+.subj h3{margin:0 0 10px;font-size:1.02rem;font-weight:600}
+.years{display:flex;flex-wrap:wrap;gap:6px}
+.yr{
+  display:inline-flex;align-items:center;gap:5px;text-decoration:none;color:var(--ink);
+  border:1.5px solid var(--line);border-radius:8px;padding:4px 10px;font-weight:600;font-size:.92rem;font-variant-numeric:tabular-nums;
+}
+.yr:hover{border-color:var(--ink);background:color-mix(in srgb,var(--mark) 30%,transparent)}
+.yr[data-done="true"]{background:var(--done);border-color:var(--done);color:var(--done-ink)}
+.yr[data-done="true"]::before{content:"\2713"}
+.empty{padding:40px 16px;text-align:center;background:var(--card);border:1.5px dashed var(--line);border-radius:12px;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:1.05rem;margin-bottom:4px}
+
+footer{margin:40px 0 28px;padding-top:18px;border-top:1.5px solid var(--line);color:var(--muted);font-size:.88rem;max-width:70ch}
+footer a{color:var(--focus)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.classbtn[aria-pressed="true"]{transform:none}}
+@media (max-width:520px){.classbtn{-webkit-text-stroke-width:2px}.row>.lbl{width:100%}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span>Board</span>Papers</div>
+    <button class="theme" id="theme" type="button">Dark mode</button>
+  </header>
+
+  <section class="hero">
+    <h1>Previous year question papers for Class 10 and Class 12</h1>
+    <p>Pick your class, board and subject. Open a year's paper, and it gets ticked off so you can see what you have practised.</p>
+    <div class="classpick" role="group" aria-label="Class">
+      <button class="classbtn" data-class="10" aria-pressed="true" type="button">10<small>Secondary</small></button>
+      <button class="classbtn" data-class="12" aria-pressed="false" type="button">12<small>Senior secondary</small></button>
+    </div>
+  </section>
+
+  <section class="controls" aria-label="Filters">
+    <div class="row"><span class="lbl">Board</span><div class="row" id="boards"></div></div>
+    <div class="row" id="streamRow"><span class="lbl">Stream</span><div class="row" id="streams"></div></div>
+    <div class="row"><span class="lbl">Year</span><div class="row" id="yearFilter"></div></div>
+    <div class="row"><span class="lbl">Paper</span><div class="row" id="types"></div></div>
+    <div class="row"><input id="q" class="search" type="search" placeholder="Search a subject, e.g. Physics" aria-label="Search subject"></div>
+  </section>
+
+  <div class="status" aria-live="polite">
+    <span id="count"></span>
+    <span><strong id="progress">0</strong> opened <button class="reset" id="clear" type="button">Clear ticks</button></span>
+  </div>
+
+  <main id="results"></main>
+
+  <footer>
+    This is an unofficial study aid and is not run by any board. Papers open from the board's own website, which is where the latest official versions are published:
+    <a href="https://cbseacademic.nic.in/" target="_blank" rel="noopener">CBSE</a>,
+    <a href="https://upmsp.edu.in/" target="_blank" rel="noopener">UP Board</a>,
+    <a href="https://cisce.org/" target="_blank" rel="noopener">CISCE (ICSE and ISC)</a>.
+  </footer>
+</div>
+
+<script>
+/* ================= EDIT HERE =================
+   1. PORTALS: the page each board's papers open on by default.
+   2. LINKS: add direct PDF links to override the portal for one paper.
+      Key format:  "Board|Class|Subject|Year|Type"
+      Type is "Question paper" or "Marking scheme".
+      Example:
+        "CBSE|12|Physics|2025|Question paper": "https://your-site.com/papers/cbse-12-physics-2025.pdf"
+================================================= */
+const PORTALS = {
+  "CBSE":     "https://www.cbse.gov.in/cbsenew/samplepaper.html",
+  "UP Board": "https://upmsp.edu.in/ModelPaper.html",
+  "ICSE / ISC": "https://cisce.org/archive-library/"
+};
+const LINKS = {};
+
+const YEARS = [2026,2025,2024,2023,2022,2021,2020,2019];
+const TYPES = ["Question paper","Marking scheme"];
+
+const DATA = {
+  "10": {
+    "CBSE": { "All subjects": ["English Language and Literature","Hindi Course A","Hindi Course B","Mathematics Standard","Mathematics Basic","Science","Social Science","Sanskrit","Information Technology"] },
+    "UP Board": { "All subjects": ["Hindi","English","Mathematics","Science","Social Science","Sanskrit","Computer"] },
+    "ICSE / ISC": { "All subjects": ["English","Hindi","Mathematics","Physics","Chemistry","Biology","History and Civics","Geography"] }
+  },
+  "12": {
+    "CBSE": {
+      "Science": ["Physics","Chemistry","Mathematics","Biology","Computer Science","English Core"],
+      "Commerce": ["Accountancy","Business Studies","Economics","Mathematics","English Core"],
+      "Humanities": ["History","Political Science","Geography","Economics","Psychology","Hindi Core"]
+    },
+    "UP Board": {
+      "Science": ["Physics","Chemistry","Mathematics","Biology","Hindi","English"],
+      "Commerce": ["Accountancy","Business Studies","Economics","Hindi","English"],
+      "Arts": ["History","Civics","Geography","Economics","Sociology","Hindi","English"]
+    },
+    "ICSE / ISC": { "All subjects": ["English","Physics","Chemistry","Mathematics","Biology","Accounts","Commerce","Economics","History"] }
+  }
+};
+
+const state = { cls:"10", board:"CBSE", stream:"All", year:"All", type:TYPES[0], q:"" };
+const $ = id => document.getElementById(id);
+
+/* per-viewer ticks, kept in the browser only */
+let done = {};
+try { done = JSON.parse(localStorage.getItem("bp-done") || "{}"); } catch(e) { done = {}; }
+function saveDone(){ try { localStorage.setItem("bp-done", JSON.stringify(done)); } catch(e) {} }
+
+const keyOf = (s,y) => [state.board,state.cls,s,y,state.type].join("|");
+
+function pills(el, items, current, onPick){
+  el.innerHTML = "";
+  items.forEach(v => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "pill"; b.textContent = v;
+    b.setAttribute("aria-pressed", String(v === current));
+    b.onclick = () => onPick(v);
+    el.appendChild(b);
+  });
+}
+
+function render(){
+  const boards = Object.keys(DATA[state.cls]);
+  if(!boards.includes(state.board)) state.board = boards[0];
+  const streamsObj = DATA[state.cls][state.board];
+  const streamNames = Object.keys(streamsObj);
+  if(state.stream !== "All" && !streamNames.includes(state.stream)) state.stream = "All";
+
+  document.querySelectorAll(".classbtn").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.class === state.cls)));
+  pills($("boards"), boards, state.board, v => { state.board = v; state.stream = "All"; render(); });
+
+  const multi = streamNames.length > 1;
+  $("streamRow").style.display = multi ? "" : "none";
+  if(multi) pills($("streams"), ["All"].concat(streamNames), state.stream, v => { state.stream = v; render(); });
+
+  pills($("yearFilter"), ["All"].concat(YEARS.map(String)), state.year, v => { state.year = v; render(); });
+  pills($("types"), TYPES, state.type, v => { state.type = v; render(); });
+
+  const years = state.year === "All" ? YEARS : [Number(state.year)];
+  const q = state.q.trim().toLowerCase();
+  const out = $("results");
+  out.innerHTML = "";
+  let shown = 0;
+
+  streamNames.forEach(st => {
+    if(state.stream !== "All" && st !== state.stream) return;
+    const subs = streamsObj[st].filter(s => !q || s.toLowerCase().includes(q));
+    if(!subs.length) return;
+    if(multi){
+      const h = document.createElement("h2"); h.className = "stream"; h.textContent = st; out.appendChild(h);
+    }
+    const list = document.createElement("div"); list.className = "list";
+    subs.forEach(s => {
+      shown++;
+      const card = document.createElement("div"); card.className = "subj";
+      const h3 = document.createElement("h3"); h3.textContent = s; card.appendChild(h3);
+      const yrs = document.createElement("div"); yrs.className = "years";
+      years.forEach(y => {
+        const k = keyOf(s,y);
+        const a = document.createElement("a");
+        a.className = "yr"; a.textContent = y;
+        a.href = LINKS[k] || PORTALS[state.board];
+        a.target = "_blank"; a.rel = "noopener";
+        a.dataset.done = String(!!done[k]);
+        a.title = state.type + ": " + s + " " + y + (LINKS[k] ? "" : " (opens the " + state.board + " website)");
+        a.setAttribute("aria-label", state.type + ", " + s + ", " + y);
+        a.addEventListener("click", () => { done[k] = true; saveDone(); a.dataset.done = "true"; updateProgress(); });
+        yrs.appendChild(a);
+      });
+      card.appendChild(yrs); list.appendChild(card);
+    });
+    out.appendChild(list);
+  });
+
+  if(!shown){
+    out.innerHTML = '<div class="empty"><b>No subjects match "' + q.replace(/[<>&"]/g,"") + '"</b>Check the spelling, or pick a different board or stream.</div>';
+  }
+  $("count").innerHTML = "Showing <strong>" + shown + "</strong> subject" + (shown===1?"":"s") + " for Class " + state.cls + ", " + state.board;
+  updateProgress();
+}
+
+function updateProgress(){
+  const prefix = state.board + "|" + state.cls + "|";
+  $("progress").textContent = Object.keys(done).filter(k => k.startsWith(prefix)).length;
+}
+
+document.querySelectorAll(".classbtn").forEach(b => b.onclick = () => { state.cls = b.dataset.class; state.stream = "All"; render(); });
+$("q").addEventListener("input", e => { state.q = e.target.value; render(); });
+$("clear").onclick = () => {
+  const prefix = state.board + "|" + state.cls + "|";
+  Object.keys(done).forEach(k => { if(k.startsWith(prefix)) delete done[k]; });
+  saveDone(); render();
+};
+
+/* theme toggle */
+const root = document.documentElement;
+function isDark(){
+  const t = root.getAttribute("data-theme");
+  return t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+function syncThemeBtn(){ $("theme").textContent = isDark() ? "Light mode" : "Dark mode"; }
+$("theme").onclick = () => { root.setAttribute("data-theme", isDark() ? "light" : "dark"); syncThemeBtn(); };
+syncThemeBtn();
+
+render();
+</script>
+</body>
+</html>
